@@ -4,4 +4,4 @@
 *.mtx.gz
 __pycache__/
 *.py[cod]
-
+*.tar
