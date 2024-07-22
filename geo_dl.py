@@ -15,9 +15,9 @@ import shutil
 @click.command()
 @click.option('-c','--codes', required=True, help='relative file path containing GEO accession codes')
 @click.option('-o','--output_path', required=True, help='relative folder path for where data should be stored')
-@click.option('-d', '--delete', required=False, default=False, help='delete tar files after extraction')
-@click.option('-l', '--download', required=False, default=True, help='Set true to download tar archives')
-@click.option('-e', '--extract', required=False, default=False, help='Set true to extract inner tar archives')
+@click.option('-d', '--delete', required=False, default=False, help='delete tar files after extraction (default = False)')
+@click.option('-l', '--download', required=False, default=True, help='Set True to download tar archives (default = True)')
+@click.option('-e', '--extract', required=False, default=False, help='Set True to extract inner tar archives (default = False)')
 def main(codes,output_path, delete, download, extract):
     os.makedirs(output_path, exist_ok=True)
 
